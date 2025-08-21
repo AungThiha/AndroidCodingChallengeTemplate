@@ -31,13 +31,13 @@ class HomeViewModel(
 
             val result = getPokemons()
             when (result) {
-                is Outcome.Failure<List<Pokemon>> -> result.handleInitialLoadFailure()
-                is Outcome.Success<List<Pokemon>> -> result.handleInitialLoadSuccess()
+                is Outcome.Failure<List<Pokemon>> -> result.handleFailure()
+                is Outcome.Success<List<Pokemon>> -> result.handleSuccess()
             }
         }
     }
 
-    private fun Outcome.Success<List<Pokemon>>.handleInitialLoadSuccess() {
+    private fun Outcome.Success<List<Pokemon>>.handleSuccess() {
         if (data.isEmpty()) {
             _state.value = HomeContract.State.EmptyPokemonList
         } else {
@@ -45,7 +45,7 @@ class HomeViewModel(
         }
     }
 
-    private fun Outcome.Failure<List<Pokemon>>.handleInitialLoadFailure() {
+    private fun Outcome.Failure<List<Pokemon>>.handleFailure() {
         val fullScreenErrorState = when (type) {
             FailureType.NETWORK -> {
                 createNetworkFullScreenErrorState(

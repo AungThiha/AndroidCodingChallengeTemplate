@@ -14,8 +14,8 @@ interface HomeContract {
     /*
     add listener if you need
     interface Listener {
-        fun onLoadMoreSurveys()
-        fun onTakeSurveyButtonClick()
+        fun onSomething()
+        fun onButtonClick()
     }
     */
 }
