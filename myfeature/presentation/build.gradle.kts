@@ -13,6 +13,8 @@ android {
 
 dependencies {
 
+    implementation(libs.compose.shimmer)
+
     implementation(libs.coil.network.okhttp)
     implementation(libs.coil)
 

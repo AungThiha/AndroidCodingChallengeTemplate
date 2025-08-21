@@ -31,6 +31,7 @@ materialIconsExtended = "1.7.8"
 
 # Compose third-party
 coil = "3.3.0"
+composeShimmer = "1.3.3"
 
 # Androidx
 androidx-navigation = "2.9.3"
@@ -86,6 +87,7 @@ mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 # Compose third-party
 coil = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
 coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
+compose-shimmer = { module = "com.valentinilk.shimmer:compose-shimmer", version.ref = "composeShimmer" }
 
 # navigation
 androidx-navigation = { module="androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
